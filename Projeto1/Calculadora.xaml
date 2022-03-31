@@ -1,0 +1,56 @@
+﻿<Window x:Class="Projeto1.Calculadora"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projeto1"
+        mc:Ignorable="d"
+        Title="Calculadora" Height="450" Width="800" Icon="/Imagens/calculator.png">
+    <Grid Width="800" Background="#FFF5B6F0">
+        <Image HorizontalAlignment="Left" Height="52" Margin="152,17,0,0" VerticalAlignment="Top" Width="70" Source="/Imagens/calculo.png"/>
+        <Label Content="Calculadora de operações simples" HorizontalAlignment="Left" Margin="225,36,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="DejaVu Serif"/>
+        <TextBox x:Name="txt_num1" HorizontalAlignment="Left" Margin="254,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="38" Background="White" TextChanged="txt_num1_TextChanged"/>
+        <TextBox x:Name="txt_num2" HorizontalAlignment="Left" Margin="421,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="40" RenderTransformOrigin="0.441,2.07" Background="White"/>
+        <Button x:Name="btMultiplicar" HorizontalAlignment="Left" Margin="308,196,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.597,2.752" Height="77" Width="76" Click="btMultiplicar_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Imagens/multiplicação.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btDivisao" Content="" HorizontalAlignment="Left" Margin="424,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.597,2.752" Height="77" Width="79" Click="btDivisao_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Imagens/divisão.png"/>
+            </Button.Background>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.077"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="" HorizontalAlignment="Left" Margin="174,196,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.597,2.752" Height="77" Width="89" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Imagens/adicao.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btSubtração" Content="" HorizontalAlignment="Left" Margin="537,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.597,2.752" Height="75" Width="92" Click="btSubtração_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Imagens/subtração.png"/>
+            </Button.Background>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.077"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="txt_resultado" HorizontalAlignment="Left" Margin="340,343,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127" Height="38" Background="White"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="343,317,0,0" VerticalAlignment="Top"/>
+        <Label Content="Resultado" HorizontalAlignment="Left" Margin="348,308,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="DejaVu Serif"/>
+        <Button x:Name="bt_limpar" Content="Limpar campo" HorizontalAlignment="Left" Margin="10,340,0,0" VerticalAlignment="Top" Height="36" Width="106" Background="{x:Null}" FontFamily="DejaVu Serif" FontWeight="Bold" Click="bt_limpar_Click"/>
+
+    </Grid>
+</Window>
